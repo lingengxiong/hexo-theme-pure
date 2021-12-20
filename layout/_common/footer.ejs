@@ -1,19 +1,19 @@
 <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
 	<%- partial('_common/social', null, {cache: !config.relative_link}) %>
     <div class="copyright">
-        <% if(theme.beian.enable) { %>
-            <% if(theme.beian.gongan) { %>
+        <% if(config.beian.enable) { %>
+            <% if(config.beian.gongan) { %>
                 <div class="publishby">
-                    <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030602006454">
+                    <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=<%= config.beian.gongan.gongan_id %>">
                         <img src="/images/gongan.png" style="float:left;"/>
-                        <%=theme.beian.gongan%>
+                        <%=config.beian.gongan.gongan_num%>
                     </a>
                 </div>
             <% } %>
-            <% if(theme.beian.icp) { %>
+            <% if(config.beian.icp) { %>
                 <div class="publishby">
                     <a href="https://beian.miit.gov.cn" target="_blank">
-                        <%=theme.beian.icp%>
+                        <%=config.beian.icp%>
                     </a>
                 </div>
 
